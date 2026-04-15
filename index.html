@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Tags Example</h1>
+        <h2>Headings</h2>
+        <h3>This is an H3 heading</h3>
+        <h4>This is an H4 heading</h4>
+        <h5>This is an H5 heading</h5>
+        <h6>This is an H6 heading</h6>
+
+        <h2>Paragraphs and Text Formatting</h2>
+        <p>This is a regular paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
+        <p>You can also use <u>underline</u>, <mark>highlighted text</mark>, and <del>strikethrough</del>.</p>
+        <p>For code snippets, use <code>&lt;code&gt;</code> tags.</p>
+        <blockquote>
+            This is a blockquote for longer quotes or citations.
+        </blockquote>
+
+        <h2>Lists</h2>
+        <h3>Unordered List</h3>
+        <ul>
+            <li>First item</li>
+            <li>Second item
+                <ul>
+                    <li>Nested item</li>
+                    <li>Another nested item</li>
+                </ul>
+            </li>
+            <li>Third item</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First ordered item</li>
+            <li>Second ordered item</li>
+            <li>Third ordered item</li>
+            <li>Fourth ordered item </li>
+        </ol>
+
+        <h3>Description List</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+        </dl>
+
+        <h2>Links and Images</h2>
+        <p><a href="https://www.example.com" target="_blank">This is a link to an external website</a></p>
+        <p><a href="#section1">Jump to Section 1</a></p>
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder image" width="300" height="200">
+
+        <h2 id="section1">Section 1: Forms</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+            <input type="radio" id="option1" name="choice" value="option1">
+            <label for="option1">Option 1</label><br>
+            <input type="radio" id="option2" name="choice" value="option2">
+            <label for="option2">Option 2</label><br><br>
+
+            <input type="checkbox" id="agree" name="agree" value="yes">
+            <label for="agree">I agree to the terms</label><br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h2>Tables</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>30</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>25</td>
+                    <td>Los Angeles</td>
+                </tr>
+                <tr>
+                    <td>Bob Johnson</td>
+                    <td>35</td>
+                    <td>Chicago</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Semantic Elements</h2>
+        <header>
+            <h3>Header Section</h3>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h3>Main Content Section</h3>
+                <p>This is the main content of the page.</p>
+            </section>
+            <aside>
+                <h4>Aside Content</h4>
+                <p>This is additional information related to the main content.</p>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy; 2023 HTML Example. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS Study Guide</title>
+</head>
+<body>
+ <h1>JavaScript Study Output</h1>
+ <p>Press <strong>F12</strong> (Windows) or <strong>Cmd+Opt+J</strong> (Mac)
+and look at the <strong>Console</strong> tab to see the results.</p>
+ <script>
+ let colors=["red","green"];
+ console.log(colors);
+ colors.push("yellow");
+ console.log(colors);
+ colors.pop();
+ console.log(colors);
+ colors.unshift("orange");
+ console.log(colors);
+ colors.shift();
+ console.log(colors);
+ console.log(colors.indexOf("red"));
+ console.log(colors.reverse());
+ console.log(colors.includes("black"));
+ let total="";
+ for(let item of colors)
+ {
+     console.log(item,"is a color");
+     total+=item;
+ }
+ console.log(total);
+ 
+ let student=["bob","Alice","JUJU","Bibek"];
+ const searchWord="BOB";
+ let found=false;
+ for(let name of student)
+ {
+     let uppercase=name.toUpperCase();
+     if(uppercase===searchWord)
+     {
+         found=true;
+         break;
+     }
+    
+ }
+ if(found)
+ console.log("found");
+ else 
+ console.log("not found");
+ let star="";
+ for(let i=1;i<=5;i++)
+ {
+     for(j=1;j<=i;j++)
+     {
+         star+="*";
+     }
+     <!--console.log("\n");-->
+     star+="\n";
+ }
+ console.log(star);
+ </script>
+</body>
+</html>

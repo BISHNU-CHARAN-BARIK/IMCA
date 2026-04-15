@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <h1>Table Using JSON string</h1>
+    <p id="pid"></p>
+    <script>
+        var data='{"Employee":['+'{"firstName":"Bishnu","lastName":"Charan"},'+'{"firstName":"Bibek","lastName":"Rout"},'+'{"firstName":"Kisan","lastName":"ishan"}]}';
+        obj=JSON.parse(data);
+        var str="<table border='1'>";
+        str+="<tr><th>First Name</th><th>Last Name</th></tr>"
+        for(let i=0;i<obj.Employee.length;i++)
+        {
+            str+="<tr>";
+            str+="<td>"+obj.Employee[i].firstName+"</td>";
+            str+="<td>"+obj.Employee[i].lastName+"</td>";
+            str+="</tr>";
+        }
+        str+="</table>";
+        document.getElementById("pid").innerHTML=str;
+    </script>
+</body>
+</html>

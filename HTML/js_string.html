@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <script >
+        const str="hello ,world my name is world and i live in this Earth.";
+        console.log(str.length);
+        console.log(str.indexOf("world"));
+        console.log(str.indexOf("World")); 
+        console.log(str.lastIndexOf("world"));
+        console.log(str.lastIndexOf("world",15));
+        
+        console.log(str.search("WORLD"));
+        console.log(str.search(/WORLD/i));//i flag used for ignore the case of letters
+        
+        console.log(str.match("World"));
+        console.log(str.match(/world/g));
+        console.log(str.match("world"));
+        
+        console.log(str.matchAll("World"));
+        console.log(str.matchAll("world"));
+        
+        console.log(str.includes("World"));
+        console.log(str.includes("world"));
+        
+        console.log(str.startsWith("World"));
+        console.log(str.startsWith("hello"));
+        
+        console.log(str.slice(6,12));
+        console.log(str.substring(6,12));
+        
+        console.log(str.slice(-6));//backword indexing from -1 to onwards
+        
+        console.log(str.substring(-6));// it prints all the text
+        
+        console.log(str.at(-6));
+        console.log(str.charAt(6));//it can't take negative index
+        
+        console.log(str.replace("w","*"));
+        console.log(str.replaceAll("w","*"));
+        console.log(str.replace("L","*"));
+        console.log(str.replace(/L/i,"*"));//regular expression along with i flag is used for ignore the case of letters
+        console.log(str.replaceAll("l","*"));
+        
+        
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+        
+        const str1="      yhjhh.       ";
+        console.log(str1.length);
+        const text=str1.trim();
+        console.log(text);
+        console.log(str1);
+        console.log(text.length);
+        
+        
+        console.log(str.split());
+        const arr=Array.from(str);
+        console.log(arr.reverse());
+        console.log(arr.join(","));
+        
+        
+        
+        console.log("a".charCodeAt(0));
+        console.log("z".charCodeAt(0));
+        
+       for(let char=97;char<=122;char++)
+       {
+           console.log(String.fromCharCode(char));
+       }
+      </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add An Employee</h1>
+    <form action="thanku.html" method="post" onsubmit="validate(event)">
+        Name<br>
+        <input type="text" name="name" id="name"><br>
+        <label id="nameError" class="error"></label><br>
+        Gender<br>
+        <input type="radio" name="gender"  value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <br>
+        <label id="genderError" class="error"></label><br>
+        Date of Birth<br>
+        <input type="date" name="dob" id="dob"><br>
+        <label id="dobError" class="error"></label><br>
+        Address<br>
+        <textarea name="address" cols="30" rows="5" id="address"></textarea>
+        <br>
+       <label id="addressError" class="error"></label><br>
+        Mobile<br>
+        <input type="text" name="mobile" id="mobile"><br>
+        <label id="mobileError" class="error"></label><br>
+        Email<br>
+        <input type="email" name="email" id="email"><br>
+        <label id="emailError" class="error"></label><br>
+        Department Name<br>
+        <select name="dept" id="dept">
+            <option value="">Select</option>
+            <option value="HR">HR</option>
+            <option value="R&D">R&D</option>
+            <option value="SDE">SDE</option>
+        </select>
+        <br>
+        <label id="deptError" class="error"></label><br>
+        Password <br>
+        <input type="password" name="password" id="password">
+        <br>
+        <label id="passwordError" class="error"></label><br>
+        Confirm Password <br>
+        <input type="password" name="password" id="cpassword">
+        <br>
+        <label id="cpasswordError" class="error"></label><br>
+        <input type="submit" name="add_emp" value="ADD">
+    </form>
+    <script>
+	function validate(e){
+    // alert("JS is connected");
+    try{
+        let name = document.getElementById("name").value
+        let dob = document.getElementById("dob").value
+        let address = document.getElementById("address").value
+        let mobile = document.getElementById("mobile").value
+        let email = document.getElementById("email").value
+        let dept = document.getElementById("dept").value
+        let password = document.getElementById("password").value
+        let cpassword = document.getElementById("cpassword").value
+        let gender = document.getElementsByName("gender")
+        
+        let error = false;
+
+        let nameError = document.getElementById("nameError")
+        let genderError = document.getElementById("genderError")
+        let dobError = document.getElementById("dobError")
+        let mobileError = document.getElementById("mobileError")
+        let emailError = document.getElementById("emailError")
+        let addressError = document.getElementById("addressError")
+        let deptError = document.getElementById("deptError")
+        let passwordError = document.getElementById("passwordError")
+        let cpasswordError = document.getElementById("cpasswordError")
+
+        if(name === "" || name === null){
+            // alert("Name is required");
+            nameError.innerHTML = "Name is Required"
+            error = true;
+        } else {
+            nameError.innerHTML = ""
+        }
+        if(gender[0].checked === false && gender[1].checked === false){
+            genderError.innerHTML = "Gender is Required"
+            error = true;
+        } else {
+            genderError.innerHTML = ""
+        }
+
+        let maxDate = new Date()
+        if(dob === "" || dob === null){
+            dobError.innerHTML = "DoB is Required"
+            error = true;
+        } else {
+            dob = new Date(dob)
+            if(dob >= maxDate){
+                dobError.innerHTML = "Please enter a valid DOB"
+            error = true;
+            } else {
+                dobError.innerHTML = ""
+            }
+        }
+
+        if(address === "" || address === null){
+            addressError.innerHTML = "Address is Required"
+            error = true;
+        } else {
+            addressError.innerHTML = ""
+        }
+
+        let mobPat = /^[6-9][0-9]{9}$/
+        if(mobile === "" || mobile === null){
+            mobileError.innerHTML = "Mobile is Required"
+            error = true;
+        } else if(!mobile.match(mobPat)){
+            mobileError.innerHTML = "Please enter a 10 digit valid mobile number"
+            error = true;
+        } else {
+            mobileError.innerHTML = ""
+        }
+        let emailPat = /^[\w\.]{4,}@[a-zA-Z\.]{5,}\.[a-zA-Z]{2,}/
+        if(email === "" || email === null){
+            emailError.innerHTML = "Email is Required"
+            error = true;
+        } else if(!email.match(emailPat)){
+            emailError.innerHTML = "Please enter a valid email id"
+            error = true;
+        } else {
+            emailError.innerHTML = ""
+        }
+
+        if(dept === "" || dept === null){
+            deptError.innerHTML = "Dept is Required"
+            error = true;
+        } else {
+            deptError.innerHTML = ""
+        }
+
+        let passPat = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,16}$/
+        if(password === "" || password === null){
+            passwordError.innerHTML = "Password is Required"
+            error = true;
+        } else if(!password .match(passPat)){
+            passwordError.innerHTML = "Please enter a strong password(8-16) with uppercase lowercase numbers and special chars."
+            error = true;
+        }else {
+            passwordError.innerHTML = ""
+        }
+
+        if(cpassword === "" || cpassword === null){
+            cpasswordError.innerHTML = "Confirm password is Required"
+            error = true;
+        } else if(cpassword !== password){
+            cpasswordError.innerHTML = "Confirm password must be same as password"
+            error = true;
+        } else {
+            cpasswordError.innerHTML = ""
+        }
+
+        if(error){
+            e.preventDefault()
+        }
+    } catch(error){
+        console.log(error);
+        e.preventDefault()
+    }
+}
+	</script>
+</body>
+</html>
