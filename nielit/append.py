@@ -1,0 +1,7 @@
+f=open("write.txt","a")
+f.write("This is the second line.\n")
+f.close()
+f1=open("write.txt","r")
+data=f1.read()
+print(data)
+f1.close()
