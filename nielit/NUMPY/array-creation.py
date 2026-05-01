@@ -1,0 +1,10 @@
+import numpy as np
+arr1=np.zeros(3)
+arr2=np.ones((2,3))
+identitymatrix=np.eye(3)
+arr3=np.full(3,7)#np.full(no. of element,number)
+# arr4=np.empty()
+print(arr1)
+print(arr2)
+print("identity matrix: \n",identitymatrix)
+print(arr3)

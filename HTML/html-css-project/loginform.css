@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "poppins",sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    background-color: aquamarine;
+}
+.container{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+.container .title{
+    line-height: 80px;
+    background-color: rgb(45, 95, 78);
+    padding-left: 20px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    /* margin-bottom: 5px; */
+
+}
+.container form{
+    padding: 30px 20px 25px 20px;
+
+
+}
+.container form .row{
+    height: 45px;
+    background-color: rgb(45, 95, 78);
+    margin-bottom: 15px;  
+    position: relative;
+    border-radius: 5px;
+}
+.container form .row input{
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 18px;
+}
+form .row input:focus{
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188 ,156, 0.25);
+    border-color:rgb(45, 95, 78) ;
+}
+.container form .row i{
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    background-color: rgb(45, 95, 78);
+    border: 1px solid rgb(45, 95, 78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 20px;
+
+}
+.container form .row.button input{
+    padding-left: 0px;
+    background-color: rgb(45, 95, 78);
+    border: 1px solid rgb(45, 95, 78);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+
+}
+form .row.button input:hover{
+    background-color: rgb(5, 63, 44);
+}
+.container form .pass{
+    margin-bottom: 20px;
+
+}
+.container form .pass a{
+    color:rgb(45, 95, 78) ;
+    text-decoration: none;
+    font-size: 18px;
+}
+.container form .pass a:hover{
+    text-decoration: underline;
+}
+.container form .signup-link{
+    color: rgb(45, 95, 78);
+    display: flex;
+    justify-content: center;
+
+}
+.container form .signup-link a{
+    color: rgb(45, 95, 78);
+    text-decoration: none;
+
+}
+.container form .signup-link a:hover{
+    text-decoration: underline;
+}
+
